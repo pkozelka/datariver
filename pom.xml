@@ -14,6 +14,22 @@
         <relativePath/>
     </parent>
     <url>http://code.kozelka.net/${project.artifactId}</url>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.12</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <!-- -->
+        <pluginManagement>
+
+        </pluginManagement>
+    </build>
     <inceptionYear>2015</inceptionYear>
     <developers>
         <developer>
@@ -43,6 +59,8 @@
         </license>
     </licenses>
     <modules>
+        <module>datariver-cli</module>
+        <module>datariver-core</module>
     </modules>
     <scm>
         <connection>scm:git:http://github.com/pkozelka/datariver.git</connection>
